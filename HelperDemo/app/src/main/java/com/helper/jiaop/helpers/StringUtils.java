@@ -1,7 +1,11 @@
 package com.helper.jiaop.helpers;
 
+import android.text.TextUtils;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by jiaop on 2016/6/2.
@@ -126,6 +130,31 @@ public class StringUtils {
             }
         }
         return new String(source);
+    }
+
+    /**
+     * 是否是正确的邮箱地址
+     *
+     * @param strEmail
+     * @return
+     */
+    public static boolean isEmail(String strEmail) {
+        String checkemail = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
+        Pattern pattern = Pattern.compile(checkemail);
+        Matcher matcher = pattern.matcher(strEmail);
+        return matcher.matches();
+    }
+
+    /**
+     * 是否是正确的手机号码
+     *
+     * @param mobiles
+     * @return
+     */
+    public static boolean isMobileNO(String mobiles) {
+        String telRegex = "[1][358]\\d{9}";
+        if (TextUtils.isEmpty(mobiles)) return false;
+        else return mobiles.matches(telRegex);
     }
 
 }
