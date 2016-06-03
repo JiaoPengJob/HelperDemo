@@ -28,8 +28,13 @@ public class MainActivity extends AppCompatActivity {
                 handler.proceed();
             }
         });
+        webView.getSettings().setDefaultTextEncodingName("utf-8");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setUseWideViewPort(true);
+
+        webView.addJavascriptInterface(new JsInterface(this),
+                "AndroidWebView");
+        webView.loadUrl("");
     }
 
     /**
