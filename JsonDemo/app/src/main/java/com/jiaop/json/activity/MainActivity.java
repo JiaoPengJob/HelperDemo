@@ -1,7 +1,9 @@
-package com.jiaop.json;
+package com.jiaop.json.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.jiaop.json.R;
 
 public class MainActivity extends AppCompatActivity {
 
