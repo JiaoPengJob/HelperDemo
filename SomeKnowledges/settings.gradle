@@ -1,1 +1,1 @@
-include ':app', ':listview_knowledge'
+include ':app', ':listview_knowledge', ':chatdemo'
