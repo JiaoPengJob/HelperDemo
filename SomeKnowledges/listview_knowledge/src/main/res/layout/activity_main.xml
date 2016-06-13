@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jiaop.knowledge.listview_knowledge.MainActivity">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        ></ListView>
+
+    <TextView
+        android:id="@+id/emptyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is Empty"
+        />
+</RelativeLayout>
+<!--
+    ListView的其他属性:
+    //设置子项间的分割线颜色,取消分割线,值设置为@null
+    android:divider="@android:color/darker_gray"
+    //设置子项间的分割线高度
+    android:dividerHeight="10dp"
+    //隐藏滚动条
+    android:scrollbars = "none"
+    //取消子项点击效果,或设置其他效果
+    android:listSelector = "@android:color/transparent"
+
+-->
